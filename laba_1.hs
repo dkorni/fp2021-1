@@ -27,5 +27,11 @@ distance (x1 , y1) (x2 , y2) = sqrt ((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2))
 f1 :: (Float, Float, Float, Float, Float, Float) -> Bool
 f1 (x1, y1, x2, y2, r1, r2) = (r1 - r2) <= (distance (x1,y1) (x2,y2)) && distance (x1,y1) (x2,y2) <= (r1 + r2)
 
+-- f1 (2,2,3,4,1,2)
+-- True
+
+-- f2 2 2 3 4 1 0.5
+-- False
+
 f2 :: Float -> Float -> Float -> Float -> Float -> Float -> Bool
 f2 x1 y1 x2 y2 r1 r2 = (r1 - r2) <= (distance (x1,y1) (x2,y2)) && distance (x1,y1) (x2,y2) <= (r1 + r2)
